@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @model IEnumerable<Enrollment>
+}
+    <h2>Enrollments</h2>
+    <a href="/Enrollments/Create">Create New Enrollment</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Worker</th>
+                <th>Shift</th>
+                <th>Enrollment Date</th>
+                <th>Confirmation</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var enrollment in Model)
+            {
+                <tr>
+                    <td>@enrollment.Worker.Name</td>
+                    <td>@enrollment.Shift.Task</td>
+                    <td>@enrollment.EnrollmentDate</td>
+                    <td>@enrollment.Confirmation</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

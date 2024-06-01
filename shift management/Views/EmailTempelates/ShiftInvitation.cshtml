@@ -1,0 +1,22 @@
+﻿@model Shift
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shift Invitation</title>
+</head>
+<body>
+    <h2>You are invited for a shift</h2>
+    <p>Dear @Model.Worker.Name</p>
+    <p>We are pleased to invite you for the following shift:</p>
+    <ul>
+        <li>Date: @Model.Date.ToShortDateString()</li>
+        <li>Time: @Model.Time</li>
+        <li>Location: @Model.Location</li>
+        <li>Task: @Model.Task</li>
+        <li>Rate: @Model.Rate</li>
+    </ul>
+    <p>Please confirm your participation by clicking <a href="@Model.ConfirmationLink">here</a>.</p>
+</body>
+</html>
+
